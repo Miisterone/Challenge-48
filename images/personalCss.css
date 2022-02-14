@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  margin-top: 20px;
+  width: 301px;
+  height: 186px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.myDIV {
+  width: 300px;
+  height: 185px;
+  border-radius: 10px;
+}
+
+.imgInCard {
+  width: 300px;
+  height: 185px;
+  border-radius: 10px;
+}
+
+.hide {
+  display: none;
+  z-index: 300;
+  margin-top: -185px;
+  background-color: aliceblue;
+  width: 300px;
+  height: 185px;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  opacity: 95%;
+}
