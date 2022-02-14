@@ -1,4 +1,4 @@
-.container {
+.container, .Bestroom {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -8,23 +8,39 @@
 .card {
   margin-top: 20px;
   width: 301px;
-  height: 186px;
+  height: 380px;
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
   align-items: center;
+
 }
 
 .myDIV {
   width: 300px;
   height: 185px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .imgInCard {
   width: 300px;
   height: 185px;
   border-radius: 10px;
+
+
+}
+.myDIV img{
+  border: 1px solid black;
+
+}
+.myDIV h3{
+  padding-top: 10px;
+}
+.myDIV p{
+  padding: 15px;
+  font-size: 0.7em;
+  line-height: 1.5em;
 }
 
 .hide {
@@ -34,9 +50,14 @@
   background-color: aliceblue;
   width: 300px;
   height: 185px;
+  text-align: center;
+  padding-top: 25px;
 }
 
 .myDIV:hover + .hide {
   display: block;
-  opacity: 50%;
+  opacity: 65%;
+}
+.titlepage{
+  text-align: center;
 }
