@@ -1818,11 +1818,6 @@ input[type="radio"] .styled:checked + label::after {
     margin: 57px 0px 0px 25px;
 }
 
-.main-form a:hover {
-    background: #15cfe5;
-    border: solid #15cfe5 1px;
-}
-
 .about {
     padding-top: 0px !important;
     padding: 90px 0px;
@@ -1929,10 +1924,6 @@ input[type="radio"] .styled:checked + label::after {
     justify-content: center;
 }
 
-.about a:hover {
-    background: #15cfe5;;
-}
-
 .traveling {
     background-color: #fff;
     padding: 0px 0px 90px 0;
@@ -2014,10 +2005,6 @@ input[type="radio"] .styled:checked + label::after {
     border-radius: 30px;
     text-align: center;
     margin-top: 30px;
-}
-
-.traveling-box .read-more a:hover {
-    background: #15cfe5;
 }
 
 .London {
@@ -2187,10 +2174,6 @@ input[type="radio"] .styled:checked + label::after {
     border-radius: 30px;
     text-align: center;
     margin: 0 10px;
-}
-
-.amazing .amazing-box a:hover {
-    background: #15cfe5;
 }
 
 .blog {
@@ -2508,4 +2491,8 @@ ul.location_icon span {
     top: -13px;
 }
 
+.read-more{
+    margin-top: 50px;
+    text-decoration : underline;
+}
 /** slider arrow **/
