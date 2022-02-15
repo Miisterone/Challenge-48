@@ -327,16 +327,16 @@
     function Redirect() {
         switch (select.options[select.selectedIndex].value) {
             case 'Navette':
-                location.href = 'navette.html';
+                location.href = 'transport.html';
                 break;
             case 'Hotel':
-                window.location.replace("hotel.html");
+                window.location.replace("Hotel.html");
                 break;
             case 'Restaurant':
-                window.location.replace("restaurant.html");
+                window.location.replace("Restaurant.html");
                 break;
             case 'Activité':
-                window.location.replace("activite.html");
+                window.location.replace("activites.html");
                 break;
         }
     }
@@ -344,13 +344,13 @@
     function Toast() {
         switch (select.options[select.selectedIndex].value) {
             case 'Hotel':
-                window.location.replace("hotel.html");
+                window.location.replace("Hotel.html");
                 return;
             case 'Restaurant':
-                window.location.replace("restaurant.html");
+                window.location.replace("Restaurant.html");
                 return;
             case 'Activité':
-                window.location.replace("activite.html");
+                window.location.replace("activites.html");
                 return;
         }
 
