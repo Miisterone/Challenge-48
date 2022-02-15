@@ -312,6 +312,71 @@
             </div>
          </div>
       </footer>
+<script>
+    let e = document.getElementById("lieu");
+    let periodDiv =  document.getElementById("periodDiv");
+    window.onload = function () {
+        e.remove();
+    };
+
+    let select = document.getElementById('category');
+
+    function Redirect() {
+        switch (select.options[select.selectedIndex].value) {
+            case 'Navette':
+                location.href = 'transport.html';
+                break;
+            case 'Hotel':
+                window.location.replace("Hotel.html");
+                break;
+            case 'Restaurant':
+                window.location.replace("Restaurant.html");
+                break;
+            case 'Activité':
+                window.location.replace("activites.html");
+                break;
+        }
+    }
+
+    function Toast() {
+        switch (select.options[select.selectedIndex].value) {
+            case 'Hotel':
+                window.location.replace("Hotel.html");
+                return;
+            case 'Restaurant':
+                window.location.replace("Restaurant.html");
+                return;
+            case 'Activité':
+                window.location.replace("activites.html");
+                return;
+        }
+
+        let x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () {
+            x.className = x.className.replace("show", "");
+        }, 3000);
+
+        Create();
+    }
+
+    function Create() {
+        Check();
+        for (let i = 0; i <= 2; i++) {
+            e.hidden = false;
+            document.getElementById("container").appendChild(e.cloneNode(true))
+
+            let start = document.getElementsByClassName("start")[i]
+            start.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" +Math.floor(Math.random() * 10);
+
+            let end = document.getElementsByClassName("end")[i]
+            end.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" +Math.floor(Math.random() * 10);
+
+            let price = document.getElementsByClassName("price")[i]
+            price.innerHTML = Math.floor(Math.random() * 1000) + " €";
+
+        }
+    }
 
     function Check() {
         if (document.getElementById("container").childElementCount !== 0) {
