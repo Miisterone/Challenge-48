@@ -60,16 +60,31 @@
   text-align: center;
   margin-top: 60px;
 }
-
-/*Index*/
-.img-area{
-  width: 500px;
+.mars-png {
   position: relative;
-  left: 550px;
-  z-index: 30;
+  width: 240px;
+  top: -300px;
+  z-index: -1;
+  opacity: 90%;
 }
-.about-box{
-  margin-top: -460px;
-  align-items: center;
+.colonne-index .titlepage span{
+  margin-top: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin:20px;
+  padding: 10px;
+  margin-bottom: 0px;
 
+}
+.traveling-box img{
+  width: 130px;
+}
+
+.amazing-box a{
+  position: relative;
+  width: fit-content;
+}
+.amazing {
+  opacity: 80%;
+  border-radius: 10px;
 }
