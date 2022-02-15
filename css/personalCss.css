@@ -60,3 +60,16 @@
   text-align: center;
   margin-top: 60px;
 }
+
+/*Index*/
+.img-area{
+  width: 500px;
+  position: relative;
+  left: 550px;
+  z-index: 30;
+}
+.about-box{
+  margin-top: -460px;
+  align-items: center;
+
+}
