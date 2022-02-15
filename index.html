@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-   <title>OVNY</title>
-   <meta name="keywords" content="">
-   <meta name="description" content="">
-   <meta name="author" content="">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/responsive.css">
-   <link rel="icon" href="images/favicon.png" type="image/gif" />
-   <link rel="stylesheet" href="css/owl.carousel.min.css">
-   <link rel="stylesheet" href="css/toast.css">
-   <link rel="stylesheet" href="css/personalCss.css">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>OVNY</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/favicon.png" type="image/gif"/>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/personalCss.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Ultra&display=swap"
+          rel="stylesheet">
 </head>
 
 <body class="main-layout">
@@ -24,14 +27,15 @@
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section" style="left: -200px;">
                     <div class="full">
                         <div class="center-desk">
-                            <div class="logo"><a href="index.html"><img src="images/logo.png" alt="#"></a></div>
+                            <div class="logo" style="width: 20%;position: relative;"><a href="index.html"><img
+                                    src="images/mars-logo-sans-fond.png" alt="#"></a></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="width: 1300px;">
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="width: 1500px;left: -402px;">
                     <div class="menu-area">
                         <div class="limit-box">
                             <nav class="main-menu">
@@ -57,16 +61,17 @@
         <img src="images/banner.jpg" alt="#">
         <div class="container">
             <div class="text-bg">
-                <h1>Mars<br><strong class="white">Amazing Tour</strong></h1>
-                <div class="container">
+                <h1>À la conquête<br> de mars<br></h1>
+                <div class="container" style="margin-top: 30px;">
                     <form class="main-form" method="post" id="form-reservation" action="index.html">
                         <h3>Réservez votre billet</h3>
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="row">
                                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="categoryDiv">
-                                        <label>Category</label>
-                                        <select class="form-control" name="Any" id="category" onclick="DisplayPeriod(value)">
+                                        <label>Categories</label>
+                                        <select class="form-control" name="Any" id="category"
+                                                onclick="DisplayPeriod(value)">
                                             <option>Navette</option>
                                             <option>Hotel</option>
                                             <option>Restaurant</option>
@@ -78,7 +83,7 @@
                                         <input class="form-control" placeholder="Any" type="date" name="Any"
                                                id="calendar">
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="periodDiv" style="display: none">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="periodDiv">
                                         <label>Durée</label>
                                         <select class="form-control" name="jour" id="period">
                                             <option>1 jours</option>
@@ -90,14 +95,17 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                                <a class="main_bt" style="margin-top: 25px;color: white" onclick="Toast()">Search<button type="submit"></button></a>
+                                <a class="main_bt" style="margin-top: 25px;" onclick="Toast()">Chercher<button type="submit"></button></a>
                             </div>
                             <div class="col-md-12" id="container">
                                 <div class="row" style="margin-top: 10px;" id="lieu">
                                     <div class="offre wrapper" id="transport1" href="#">
-                                        <div class="offre-txt" style="margin-top: 10px;"><h2><b class="start" style="margin-right: 5px;">23:18</b> Mars</h2>
+                                        <div class="offre-txt" style="margin-top: 10px;"><h2><b class="start"
+                                                                                                style="margin-right: 5px;">23:18</b>
+                                            Mars</h2>
                                         </div>
-                                        <div class="offre-txt"><h2><b class="end" style="margin-right: 5px;">12:18</b> Terre</h2></div>
+                                        <div class="offre-txt"><h2><b class="end" style="margin-right: 5px;">12:18</b>
+                                            Terre</h2></div>
                                     </div>
                                     <div class="prix" id="transport2" href="#">
                                         <div style="margin-top: 10px"><h2>Dès</h2></div>
@@ -107,12 +115,12 @@
                                 </div>
                             </div>
                         </div>
-                     </form>
-                  </div>
-               </div>
+                    </form>
+                </div>
             </div>
-         </div>
-      </section>
+        </div>
+    </div>
+</section>
 
 <div id="snackbar">Success</div>
 
@@ -142,77 +150,77 @@
         </div>
     </div>
 
-      <div id="travel" class="traveling">
-         <div class="container">
+    <div id="travel" class="traveling">
+        <div class="container">
             <div class="row">
-               <div class="colonne-index">
-                  <div class="titlepage">
-                     <h2>Sélectionnez des offres pour voyager</h2>
-                     <span>C'est un fait établi depuis longtemps qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page. L'intérêt d'utiliser Lorem Ipsum est qu'il a une distribution plus ou moins normale des lettres,</span>
-                  </div>
-               </div>
+                <div class="colonne-index">
+                    <div class="titlepage">
+                        <h2>Sélectionnez des offres pour voyager</h2>
+                        <span>C'est un fait établi depuis longtemps qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page. L'intérêt d'utiliser Lorem Ipsum est qu'il a une distribution plus ou moins normale des lettres,</span>
+                    </div>
+                </div>
             </div>
             <div class="row">
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="traveling-box">
-                     <i><img src="icon/travel-icon.png" alt="icon"/></i>
-                     <h3>TRANSPORT</h3>
-                     <p> going to use a passage of Lorem Ipsum, you need to be </p>
-                     <div class="read-more">
-                        <a  href="transport.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="traveling-box">
-                     <i><img src="icon/travel-icon2.png" alt="icon"/></i>
-                     <h3>HOTEL</h3>
-                     <p> going to use a passage of Lorem Ipsum, you need to be </p>
-                     <div class="read-more">
-                        <a  href="Hotel.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="traveling-box">
-                     <i><img src="icon/travel-icon3.png" alt="icon"/></i>
-                     <h3>RESTAURANT</h3>
-                     <p> going to use a passage of Lorem Ipsum, you need to be </p>
-                     <div class="read-more">
-                        <a  href="Restaurant.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div class="traveling-box">                     
-                     <i><img src="icon/travel-icon4.png" alt="icon"/></i>
-                     <h3>ACTIVITE</h3>
-                     <p> going to use a passage of Lorem Ipsum, you need to be </p>
-                     <div class="read-more">
-                        <a  href="activites.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="traveling-box">
+                        <i><img src="icon/travel-icon.png" alt="icon"/></i>
+                        <h3>TRANSPORT</h3>
+                        <p> going to use a passage of Lorem Ipsum, you need to be </p>
+                        <div class="read-more">
+                            <a href="transport.html">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="traveling-box">
+                        <i><img src="icon/travel-icon2.png" alt="icon"/></i>
+                        <h3>HOTEL</h3>
+                        <p> going to use a passage of Lorem Ipsum, you need to be </p>
+                        <div class="read-more">
+                            <a href="Hotel.html">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="traveling-box">
+                        <i><img src="icon/travel-icon3.png" alt="icon"/></i>
+                        <h3>RESTAURANT</h3>
+                        <p> going to use a passage of Lorem Ipsum, you need to be </p>
+                        <div class="read-more">
+                            <a href="Restaurant.html">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="traveling-box">
+                        <i><img src="icon/travel-icon4.png" alt="icon"/></i>
+                        <h3>ACTIVITE</h3>
+                        <p> going to use a passage of Lorem Ipsum, you need to be </p>
+                        <div class="read-more">
+                            <a href="activites.html">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
-      <div class="amazing">
-         <div class="container">
+        </div>
+    </div>
+    <div class="amazing">
+        <div class="container">
             <div class="row">
-               <div class="col-md-12">
-                  <div class="amazing-box">  
-                    <h2>CHOISISSEZ L'EXPERIENCE OVNY</h2> 
-                    <p><span>Prolongez la magie jusque dans vos rêves</span></p> 
-                    <a href="#" style="width: 50%;">Réservez dès maintenant votre sejour à OVNY</a>
-                  </div>
-               </div>
+                <div class="col-md-12">
+                    <div class="amazing-box">
+                        <h2>CHOISISSEZ L'EXPERIENCE OVNY</h2>
+                        <p><span>Prolongez la magie jusque dans vos rêves</span></p>
+                        <a href="#" style="width: 50%;">Réservez dès maintenant votre sejour à OVNY</a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </div>
+        </div>
+    </div>
 </div>
 <script>
     let e = document.getElementById("lieu");
-    let periodDiv =  document.getElementById("periodDiv");
+    let periodDiv = document.getElementById("periodDiv");
     window.onload = function () {
         e.remove();
     };
@@ -265,10 +273,10 @@
             document.getElementById("container").appendChild(e.cloneNode(true))
 
             let start = document.getElementsByClassName("start")[i]
-            start.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" +Math.floor(Math.random() * 10);
+            start.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" + Math.floor(Math.random() * 10);
 
             let end = document.getElementsByClassName("end")[i]
-            end.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" +Math.floor(Math.random() * 10);
+            end.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" + Math.floor(Math.random() * 10);
 
             let price = document.getElementsByClassName("price")[i]
             price.innerHTML = Math.floor(Math.random() * 1000) + " €";
@@ -286,72 +294,72 @@
         }
     }
 
-    function DisplayPeriod(value){
-        if(value === "Hotel"){
-            periodDiv.style.display = 'unset';
-        }else{
-            periodDiv.style.display = 'none';
+    function DisplayPeriod(value) {
+        if (value === "Hotel") {
+            eriodDiv.setAttribute("disabled", "disabled");
+        } else {
+            periodDiv.setAttribute("disabled", "disabled");
         }
     }
 
 </script>
 <footer>
     <div id="contact" class="footer">
-       <div class="container">
-          <div class="row pdn-top-30">
-             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                <ul class="location_icon">
-                   <li> <a href="#"><img src="icon/facebook.png"></a></li>
-                   <li> <a href="#"><img src="icon/Twitter.png"></a></li>
-                   <li> <a href="#"><img src="icon/linkedin.png"></a></li>
-                   <li> <a href="#"><img src="icon/instagram.png"></a></li>
-                </ul>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                <div class="Follow">
-                   <h3>NOUS CONTACTER</h3>
-                   <span>2 <br>Place de l'Europe,<br>
+        <div class="container">
+            <div class="row pdn-top-30">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <ul class="location_icon">
+                        <li><a href="#"><img src="icon/facebook.png"></a></li>
+                        <li><a href="#"><img src="icon/Twitter.png"></a></li>
+                        <li><a href="#"><img src="icon/linkedin.png"></a></li>
+                        <li><a href="#"><img src="icon/instagram.png"></a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="Follow">
+                        <h3>NOUS CONTACTER</h3>
+                        <span>2 <br>Place de l'Europe,<br>
                    Compans, Toulouse<br>
                    05.02.22.20.05</span>
+                    </div>
                 </div>
-             </div>
-             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                <div class="Follow">
-                   <h3>LIENS SUPPLÉMENTAIRES</h3>
-                   <ul class="link">
-                      <li> <a href="#">À propos de nous</a></li>
-                      <li> <a href="#">Termes et conditions</a></li>
-                      <li> <a href="#">Politique de confidentialité</a></li>
-                      <li> <a href="#">News</a></li>
-                      <li> <a href="#">Nous contacter</a></li>
-                   </ul>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <div class="Follow">
+                        <h3>LIENS SUPPLÉMENTAIRES</h3>
+                        <ul class="link">
+                            <li><a href="#">À propos de nous</a></li>
+                            <li><a href="#">Termes et conditions</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Nous contacter</a></li>
+                        </ul>
+                    </div>
                 </div>
-             </div>
-             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="Follow">
-                   <h3> Contact</h3>
-                   <div class="row">
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                         <input class="Newsletter" placeholder="Nom Prénom" type="text">
-                      </div>
-                      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                         <input class="Newsletter" placeholder="Email" type="text">
-                      </div>
-                      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                         <textarea class="textarea" placeholder="commentaire" type="text">Commentaire</textarea>
-                      </div>
-                   </div>
-                   <button class="Subscribe">Envoyer</button>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="Follow">
+                        <h3> Contact</h3>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="Newsletter" placeholder="Nom Prénom" type="text">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input class="Newsletter" placeholder="Email" type="text">
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <textarea class="textarea" placeholder="commentaire" type="text">Commentaire</textarea>
+                            </div>
+                        </div>
+                        <button class="Subscribe">Envoyer</button>
+                    </div>
                 </div>
-             </div>
-          </div>
-          <div class="copyright">
-             <div class="container">
-                <p>© 2022 All Right Reserved By OVNY</a></p>
-             </div>
-          </div>
-       </div>
+            </div>
+            <div class="copyright">
+                <div class="container">
+                    <p>© 2022 All Right Reserved By OVNY</a></p>
+                </div>
+            </div>
+        </div>
     </div>
- </footer>
+</footer>
 </body>
 </html>

@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
@@ -290,13 +291,12 @@ button {
 }
 
 .main_bt {
-    background: #ee580f;
-    color: #fff;
+    background: #F2E1C2;
+    color: #262526;
     padding: 15px 60px 15px 60px;
     float: left;
     font-size: 15px;
     font-weight: 400;
-    border: solid #ee580f 2px;
     border-radius: 30px;
     margin: 15px 0px 60px 0px;
 }
@@ -435,11 +435,10 @@ a.readmore_bt {
 /*--------------------------------------------------------------------- header area ---------------------------------------------------------------------*/
 
 .header {
-    background: url(../images/header-bg.jpg);
     background-color: rgba(0, 0, 0, 0);
     background-repeat: repeat;
     background-size: auto;
-    background-color: #00000052;
+    background-color: #262625 !important;
     box-shadow: #060606 0px 0px 3px 0px;
     z-index: 999;
     width: 100%;
@@ -493,7 +492,7 @@ ul.top_icon li a {
 }
 
 .menu-area-main li.active a {
-    color: #000;
+    color: #813420;
 }
 
 .right_cart_section {
@@ -1070,14 +1069,17 @@ ul.top_icon li a {
     position: relative;
 }
 
+@font-face{font-family:"ultra-regular";src:url("https://www.dafontfree.net/data/16/u/77260/Ultra.ttf") format("woff"),url("https://www.dafontfree.net/data/16/u/77260/Ultra.ttf") format("opentype"),url("https://www.dafontfree.net/data/16/u/77260/Ultra.ttf") format("truetype");}
+
 .main-menu ul > li a {
     line-height: 20px;
-    font-size: 16px;
+    font-size: 24px !important;
     display: block;
     font-weight: 500;
-    color: #fff;
+    color: #F2E1C2;
     padding: 15px 26px;
     padding-top: 24px;
+    font-family: 'Arial Black', Regular !important;
 }
 
 
@@ -1726,7 +1728,7 @@ input[type="radio"] .styled:checked + label::after {
     font-size: 90px;
     line-height: 108px;
     text-transform: uppercase;
-    color: #0adef8;
+    color: #813420;
     font-weight: bold;
     padding-bottom: 35px;
     padding-top: 25px;
@@ -1807,12 +1809,11 @@ input[type="radio"] .styled:checked + label::after {
 }
 
 .main-form a {
-    background: #ee580f;
+    background: #F2E1C2;
     color: #fff;
     float: left;
     font-size: 15px;
     font-weight: 400;
-    border: solid #ee580f 1px;
     padding: 10px 77px;
     margin: 57px 0px 0px 25px;
 }
@@ -2006,8 +2007,8 @@ input[type="radio"] .styled:checked + label::after {
 .traveling-box .read-more a {
     font-size: 17px;
     padding: 15px 30px;
-    background-color: #ee580f;
-    color: #fff;
+    background: #F2E1C2;
+    color: #262526;
     display: inline-block;
     line-height: 20px;
     border-radius: 30px;
@@ -2179,8 +2180,8 @@ input[type="radio"] .styled:checked + label::after {
 .amazing .amazing-box a {
     font-size: 17px;
     padding: 15px 50px;
-    background-color: #ee580f;
-    color: #fff;
+    background-color: #F2E1C2;
+    color: #262526;
     display: inline-block;
     line-height: 20px;
     border-radius: 30px;
@@ -2309,7 +2310,7 @@ label {
 }
 
 .footer {
-    background-color: #022739;
+    background-color: #813420;
 }
 
 .footer .Follow {
