@@ -62,21 +62,21 @@
                         <div class="row">
                             <div class="col-md-9">
                                 <div class="row">
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="categoryDiv">
                                         <label>Category</label>
-                                        <select class="form-control" name="Any" id="category">
+                                        <select class="form-control" name="Any" id="category" onclick="DisplayPeriod(value)">
                                             <option>Navette</option>
                                             <option>Hotel</option>
                                             <option>Restaurant</option>
                                             <option>Activité</option>
                                         </select>
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="dateDiv">
                                         <label>Date</label>
                                         <input class="form-control" placeholder="Any" type="date" name="Any"
                                                id="calendar">
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="periodDiv" style="display: none">
                                         <label>Durée</label>
                                         <select class="form-control" name="jour" id="period">
                                             <option>1 jours</option>
@@ -88,12 +88,20 @@
                                 </div>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                                <a style="margin: 25px 0px 0px 25px;" onclick="Toast()">Search
-                                    <button type="submit"></button>
-                                </a>
+                                <a class="main_bt" style="margin-top: 25px;color: white" onclick="Toast()">Search<button type="submit"></button></a>
                             </div>
-                            <div class="col-md-9">
-                                <div class="row" style="margin-top: 10px" id="lieu">
+                            <div class="col-md-12" id="container">
+                                <div class="row" style="margin-top: 10px;" id="lieu">
+                                    <div class="offre wrapper" id="transport1" href="#">
+                                        <div class="offre-txt" style="margin-top: 10px;"><h2><b class="start" style="margin-right: 5px;">23:18</b> Mars</h2>
+                                        </div>
+                                        <div class="offre-txt"><h2><b class="end" style="margin-right: 5px;">12:18</b> Terre</h2></div>
+                                    </div>
+                                    <div class="prix" id="transport2" href="#">
+                                        <div style="margin-top: 10px"><h2>Dès</h2></div>
+                                        <div style="margin-top: -15px"><h2><b class="price">1000 €</b></h2></div>
+                                        <span class="offre-btn" onclick="Redirect()"><u>Voir plus</u></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -308,58 +316,87 @@
     </div>
 </footer>
 <script>
+    let e = document.getElementById("lieu");
+    let periodDiv =  document.getElementById("periodDiv");
+    window.onload = function () {
+        e.remove();
+    };
+
+    let select = document.getElementById('category');
+
+    function Redirect() {
+        switch (select.options[select.selectedIndex].value) {
+            case 'Navette':
+                location.href = 'navette.html';
+                break;
+            case 'Hotel':
+                window.location.replace("hotel.html");
+                break;
+            case 'Restaurant':
+                window.location.replace("restaurant.html");
+                break;
+            case 'Activité':
+                window.location.replace("activite.html");
+                break;
+        }
+    }
+
     function Toast() {
-        // Get the snackbar DIV
-        var x = document.getElementById("snackbar");
+        switch (select.options[select.selectedIndex].value) {
+            case 'Hotel':
+                window.location.replace("hotel.html");
+                return;
+            case 'Restaurant':
+                window.location.replace("restaurant.html");
+                return;
+            case 'Activité':
+                window.location.replace("activite.html");
+                return;
+        }
 
-        // Add the "show" class to DIV
+        let x = document.getElementById("snackbar");
         x.className = "show";
-
-        // After 3 seconds, remove the show class from DIV
         setTimeout(function () {
             x.className = x.className.replace("show", "");
         }, 3000);
+
         Create();
     }
 
-    let select = document.getElementById('category');
-    let date = document.getElementById('calendar');
-    let period = document.getElementById('period');
+    function Create() {
+        Check();
+        for (let i = 0; i <= 2; i++) {
+            e.hidden = false;
+            document.getElementById("container").appendChild(e.cloneNode(true))
 
-    let formR = document.getElementById("form-reservation");
+            let start = document.getElementsByClassName("start")[i]
+            start.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" +Math.floor(Math.random() * 10);
 
-    formR.addEventListener("submit", (e) => {
-        e.preventDefault()
+            let end = document.getElementsByClassName("end")[i]
+            end.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" +Math.floor(Math.random() * 10);
 
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "http://localhost:8081/reservation", true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send(JSON.stringify({
-                category: select.options[select.selectedIndex].value,
-                date: date.value,
-                period: period.options[period.selectedIndex].value
-            }),
-        );
-    })
-    function Create(){
-        let e = document.getElementById("lieu");
-        if(document.getElementById("lieu").childElementCount !== 0){
-            let child = e.lastElementChild;
+            let price = document.getElementsByClassName("price")[i]
+            price.innerHTML = Math.floor(Math.random() * 1000) + " €";
+
+        }
+    }
+
+    function Check() {
+        if (document.getElementById("container").childElementCount !== 0) {
+            let child = document.getElementById("container").lastElementChild;
             while (child) {
-                e.removeChild(child);
-                child = e.lastElementChild;
+                document.getElementById("container").removeChild(child);
+                child = document.getElementById("container").lastElementChild;
             }
         }
+    }
 
-        for (let i = 0; i < 3; i++) {
-            let container = document.createElement('div');
-            let a = document.createElement('a');
-            let element = document.getElementById('lieu').appendChild(container);
-
-            element.setAttribute("class", "col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12");
-            element.appendChild(a).innerHTML = select.options[select.selectedIndex].value + " " + i;
-            element.appendChild(a).setAttribute("href", "")
-        }  
+    function DisplayPeriod(value){
+        if(value === "Hotel"){
+            periodDiv.style.display = 'unset';
+        }else{
+            periodDiv.style.display = 'none';
+        }
     }
 
 </script>
