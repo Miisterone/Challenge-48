@@ -56,55 +56,49 @@
          <div class="banner-main">
             <img src="images/banner.jpg" alt="#">
             <div class="container">
-               <div class="text-bg">
-                  <h1>Mars<br><strong class="white">Amazing Tour</strong></h1>
-                  <div class="button_section"> <a class="main_bt" href="#">Read More</a>  </div>
-                  <div class="container">
-                     <form class="main-form">
-                        <h3>Reservez l'aller-retour sur Mars</h3>
-                        <div class="row">
-                           <div class="col-md-9">
-                              <div class="row">
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Keywords</label>
-                                    <input class="form-control" placeholder="" type="text" name="">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Category</label>
-                                    <select class="form-control" name="Any">
-                                       <option>Any</option>
-                                       <option>Option 1</option>
-                                       <option>Option 2</option>
-                                       <option>Option 3</option>
-                                    </select><div class="nice-select form-control" tabindex="0"><span class="current">Any</span><ul class="list"><li class="option selected" data-value="Any">Any</li><li class="option " data-value="Option 1">Option 1</li><li class="option " data-value="Option 2">Option 2</li><li class="option " data-value="Option 3">Option 3</li></ul></div>
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Min Price</label>
-                                    <input class="form-control" placeholder="00.0" type="text" name="00.0">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Duration</label>
-                                    <input class="form-control" placeholder="Any" type="text" name="Any">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Date</label>
-                                    <input class="form-control" placeholder="Any" type="date" name="Any">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Max Price</label>
-                                    <input class="form-control" placeholder="00.0" type="text" name="00.0">
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                              <a href="#">search</a>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-               </div>
+                <div class="text-bg">
+                    <h1>À la conquête<br> de mars<br></h1>
+                    <div class="container" style="margin-top: 30px;">
+                        <form class="main-form" method="post" id="form-reservation" action="index.html">
+                            <h3>Réservez votre aller-retour sur Mars</h3>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="categoryDiv">
+                                            <label>Categories</label>
+                                            <select class="form-control" name="Any" id="category"
+                                                    onclick="DisplayPeriod(value)">
+                                                <option>Navette</option>
+                                                <option>Hotel</option>
+                                                <option>Restaurant</option>
+                                                <option>Activité</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="dateDiv">
+                                            <label>Date</label>
+                                            <input class="form-control" placeholder="Any" type="date" name="Any"
+                                                   id="calendar">
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="periodDiv">
+                                            <label>Durée</label>
+                                            <select class="form-control" name="jour" id="period">
+                                                <option>1 jours</option>
+                                                <option>2 jours</option>
+                                                <option>3 jours</option>
+                                                <option>4 jours</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                                    <a class="main_bt" style="margin-top: 25px;" onclick="Toast()">Chercher<button type="submit"></button></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-         </div>
+        </div>
       </section>
 
       <div id="about" class="about">
@@ -114,6 +108,7 @@
                   <div class="titlepage">
                      <h2>LES VEHICULES D'OVNY</h2>
                      <span> Voici les véhicules que vous pouvez trouver sur Mars en 2122, comme le buggy ou alors la navette qui vous permettront de visiter la planète rouge.</span>
+                     <img src="images/mars.png" class="mars-png" style="width: 25%;">
                   </div>
                </div>
             </div>
@@ -211,50 +206,106 @@
           </div>
         </div>
         </div>        
-      
-        <div class="col-md-12 ">
-         <div class="titlepage">
-            <h2>TROUVER L'HEBERGEMENT IDEAL !</h2>
-            <span>Repérez la chambre, le bungalow ou la suite qu'il vous faut : notre gamme répond à tous les goûts et tous les budgets !</span>
-         </div>
-      </div>
-          
-      <div class="container">
-         <div class="card">
-            <div class="myDIV">
-              <image class="imgInCard" src="./images/H1.jpg" /> 
-              <h3>Chambres standard</h3>
-              <p>En chambre simple ou double, avec ou sans vue sur les cratères, ou même dans un confortable bungalow, quel que soit votre choix, l'expérience Ovny est au rendez-vous !</p>
-            </div>
-            <div class="hide">
-               <h3>SARAB ★★</h3>
-               <p>Chambre standard</p>
+      </div><br><br>       
+
+      <div class="amazing">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div class="amazing-box">
+                         <h2>CHOISISSEZ L'EXPERIENCE OVNY</h2>
+                         <p><span>Prolongez la magie jusque dans vos rêves</span></p>
+                         <a href="#" style="width: 50%;">Réservez dès maintenant votre sejour à OVNY</a>
+                     </div>
+                 </div>
              </div>
          </div>
-         <div class="card">
-            <div class="myDIV">
-              <image class="imgInCard" src="./images/H2.jpg" /> 
-              <h3>Suites</h3>
-              <p>Profitez des chambres premium et de services exclusifs. Choisissez une Suite et bénéficiez d'une réception privée, d'un voiturier, d'un lounge dédié et bien plus !</p>
-            </div>
-            <div class="hide">
-              <h3>Hotel Dune ★★★</h3>
-              <p>Suite</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="myDIV">
-              <image class="imgInCard" src="./images/H3.jpg" /> 
-              <h3>Logement Individuel</h3>
-              <p>Si vous souhaitez profiter pleinement de l'expèrience Mars</p>
-            </div>
-            <div class="hide">
-              <h3>Echinoide ★★★★</h3>
-              <p>Logement Individuel Prenium</p>
-            </div>
-          </div>   
-      </div><br><br><br><br><br><br>           
-
+     </div><br><br><br>
+     <script>
+      let e = document.getElementById("lieu");
+      let periodDiv = document.getElementById("periodDiv");
+      window.onload = function () {
+          e.remove();
+      };
+  
+      let select = document.getElementById('category');
+  
+      function Redirect() {
+          switch (select.options[select.selectedIndex].value) {
+              case 'Navette':
+                  location.href = 'transport.html';
+                  break;
+              case 'Hotel':
+                  window.location.replace("Hotel.html");
+                  break;
+              case 'Restaurant':
+                  window.location.replace("Restaurant.html");
+                  break;
+              case 'Activité':
+                  window.location.replace("activites.html");
+                  break;
+          }
+      }
+  
+      function Toast() {
+          switch (select.options[select.selectedIndex].value) {
+              case 'Hotel':
+                  window.location.replace("Hotel.html");
+                  return;
+              case 'Restaurant':
+                  window.location.replace("Restaurant.html");
+                  return;
+              case 'Activité':
+                  window.location.replace("activites.html");
+                  return;
+          }
+  
+          let x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function () {
+              x.className = x.className.replace("show", "");
+          }, 3000);
+  
+          Create();
+      }
+  
+      function Create() {
+          Check();
+          for (let i = 0; i <= 2; i++) {
+              e.hidden = false;
+              document.getElementById("container").appendChild(e.cloneNode(true))
+  
+              let start = document.getElementsByClassName("start")[i]
+              start.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" + Math.floor(Math.random() * 10);
+  
+              let end = document.getElementsByClassName("end")[i]
+              end.innerHTML = Math.floor(Math.random() * 3) + "" + Math.floor(Math.random() * 4) + " : " + Math.floor(Math.random() * 6) + "" + Math.floor(Math.random() * 10);
+  
+              let price = document.getElementsByClassName("price")[i]
+              price.innerHTML = Math.floor(Math.random() * 1000) + " €";
+  
+          }
+      }
+  
+      function Check() {
+          if (document.getElementById("container").childElementCount !== 0) {
+              let child = document.getElementById("container").lastElementChild;
+              while (child) {
+                  document.getElementById("container").removeChild(child);
+                  child = document.getElementById("container").lastElementChild;
+              }
+          }
+      }
+  
+      function DisplayPeriod(value) {
+          if (value === "Hotel") {
+              eriodDiv.setAttribute("disabled", "disabled");
+          } else {
+              periodDiv.setAttribute("disabled", "disabled");
+          }
+      }
+  
+  </script>
       <footer>
          <div id="contact" class="footer">
             <div class="container">
