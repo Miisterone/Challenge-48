@@ -19,92 +19,83 @@
    </head>
 
    <body class="main-layout">
-      <header>
-         <div class="header">
-            <div class="container">
-               <div class="row">
-                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
-                     <div class="full">
-                        <div class="center-desk">
-                           <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="#"></a> </div>
-                        </div>
+   <header>
+      <div class="header">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section" style="left: -200px;">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo" style="width: 20%;position: relative;"><a href="index.html"><img src="images/mars-logo-sans-fond.png" alt="#"></a></div>
                      </div>
                   </div>
-                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="width: 1300px;">
-                     <div class="menu-area">
-                        <div class="limit-box">
-                           <nav class="main-menu">
-                              <ul class="menu-area-main">
-                                 <li><a href="index.html" style="font-size:22px">Home</a></li>
-                                 <li><a href="transport.html" style="font-size:22px">Transport</a></li>
-                                 <li class="active"><a href="Hotel.html" style="font-size:22px">Hotel</a></li>
-                                 <li><a href="Restaurant.html" style="font-size:22px">Restaurant</a></li>
-                                 <li><a href="activites.html" style="font-size:22px">Activite</a></li>
-                                 <li><a href="#contact" style="font-size:22px">Contact Us</a></li>
-                              </ul>
-                           </nav>
-                        </div>
+               </div>
+               <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="width: 1500px;left: -402px;">
+                  <div class="menu-area">
+                     <div class="limit-box">
+                        <nav class="main-menu">
+                           <ul class="menu-area-main">
+                              <li><a href="index.html" style="font-size:22px">Home</a></li>
+                              <li><a href="transport.html" style="font-size:22px">Transport</a></li>
+                              <li class="active"><a href="Hotel.html" style="font-size:22px">Hotel</a></li>
+                              <li><a href="Restaurant.html" style="font-size:22px">Restaurant</a></li>
+                              <li><a href="activites.html" style="font-size:22px">Activite</a></li>
+                              <li><a href="#contact" style="font-size:22px">Contact Us</a></li>
+                           </ul>
+                        </nav>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-      </header>
+      </div>
+   </header>
 
-      <section>
-         <div class="banner-main">
-            <img src="images/banner.jpg" alt="#">
-            <div class="container">
-               <div class="text-bg">
-                  <h1>Mars<br><strong class="white">Amazing Tour</strong></h1>
-                  <div class="button_section"> <a class="main_bt" href="#">Read More</a>  </div>
-                  <div class="container">
-                     <form class="main-form">
-                        <h3>Find Your Tour</h3>
-                        <div class="row">
-                           <div class="col-md-9">
-                              <div class="row">
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Keywords</label>
-                                    <input class="form-control" placeholder="" type="text" name="">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Category</label>
-                                    <select class="form-control" name="Any">
-                                       <option>Any</option>
-                                       <option>Option 1</option>
-                                       <option>Option 2</option>
-                                       <option>Option 3</option>
-                                    </select><div class="nice-select form-control" tabindex="0"><span class="current">Any</span><ul class="list"><li class="option selected" data-value="Any">Any</li><li class="option " data-value="Option 1">Option 1</li><li class="option " data-value="Option 2">Option 2</li><li class="option " data-value="Option 3">Option 3</li></ul></div>
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Min Price</label>
-                                    <input class="form-control" placeholder="00.0" type="text" name="00.0">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Duration</label>
-                                    <input class="form-control" placeholder="Any" type="text" name="Any">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Date</label>
-                                    <input class="form-control" placeholder="Any" type="date" name="Any">
-                                 </div>
-                                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <label>Max Price</label>
-                                    <input class="form-control" placeholder="00.0" type="text" name="00.0">
-                                 </div>
+   <section>
+      <div class="banner-main">
+         <img src="images/banner.jpg" alt="#">
+         <div class="container">
+            <div class="text-bg">
+               <h1>À la conquête<br> de mars<br></h1>
+               <div class="container" style="margin-top: 30px;">
+                  <form class="main-form" method="post" id="form-reservation" action="index.html">
+                     <h3>Réservez votre billet</h3>
+                     <div class="row">
+                        <div class="col-md-9">
+                           <div class="row">
+                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="categoryDiv">
+                                 <label>Categories</label>
+                                 <select class="form-control" name="Any" id="category"
+                                         onclick="DisplayPeriod(value)">
+                                    <option>Hotel</option>
+                                 </select>
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="dateDiv">
+                                 <label>Date</label>
+                                 <input class="form-control" placeholder="Any" type="date" name="Any"
+                                        id="calendar">
+                              </div>
+                              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12" id="periodDiv">
+                                 <label>Durée</label>
+                                 <select class="form-control" name="jour" id="period">
+                                    <option>1 jours</option>
+                                    <option>2 jours</option>
+                                    <option>3 jours</option>
+                                    <option>4 jours</option>
+                                 </select>
                               </div>
                            </div>
-                           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-                              <a href="#">search</a>
-                           </div>
                         </div>
-                     </form>
-                  </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+                           <a class="main_bt" style="margin-top: 25px;" onclick="Toast()">Chercher<button type="submit"></button></a>
+                        </div>
+                     </div>
+                  </form>
                </div>
             </div>
          </div>
-      </section>
+      </div>
+   </section>
 
       <div id="about" class="about">
          <div class="container">
@@ -112,7 +103,7 @@
                <div class="col-md-12 ">
                   <div class="titlepage">
                      <h2>TROUVER VOTRE HÔTEL DE RÊVE</h2>
-                     <span> fait qu'un lecteur sera distrait par le contenu lisible d'une page lorsqu'il regarde sa mise en page. L'intérêt d'utiliser Lorem Ipsum est qu'il a une distribution plus ou moins normale des lettres,</span>
+                     <span> En toute flexibilité: selon l'offre réservée, vous pouvez annuler votre réservation jusqu'à 3jours avant la date d'arrivée prévue. </span>
                   </div>
                </div>
             </div>
